@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OnlineJudge</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<body background="image/background.jpg" ondragstart="return false"></body> 
+	<!--ondragstart="return false 禁止鼠标在网页上拖动.这个属性用在body中，可以实现对文本的选择与否的控制-->
+</head>
+<body>
+	<div id="welcome">
+ 		<img src="image/welcome.png" alt="welcome" id="welcome-img">
+	</div>
+	<div id="login">
+		<img src="image/login.png" alt="login" id="login-img">
+		<p style="margin:0;opacity: 0.1">点击狗鼻子登录菜单</p>
+		<form style="display: flex;flex-direction: column;align-items: center;">
+			<input type="text" class="input" value="User ID" name="User ID" style="margin-top: 10px;" onfocus="javascript:this.style.color='#000000';if(this.value=='User ID')this.value='';" onblur="javascript:if(this.value==''){this.value='User ID';this.style.color='#CCCCCC';}"></br>
+		    <input type="text" class="input" value="Password" name="Password" onfocus="javascript:this.style.color='#000000';if(this.value=='Password')this.value='';" onblur="javascript:if(this.value==''){this.value='Password';this.style.color='#CCCCCC';}">
+			<div style="align-items: center;flex-wrap: nowrap;">
+				<input type="submit" value="登录" class="button">
+				<input type="submit" value="注册" class="button" disabled="disabled" style="cursor: no-drop;">
+				<button type="button" class="button" onclick="alert('自求多福吧！')">忘记密码</button>
+			</div>
+		</form>
+	</div>
+	<div id="click"></div>
+</body>
+<script src="js/index.js"></script>
+</html>
